@@ -223,8 +223,13 @@ styleObject:{
  在Vue中不支持此种写法，必须为小驼峰写法               
 
 
+=================v-pre=====================
+原样输出
+<div v-pre>{{message}}</div>
+渲染完成后，才显示
+<div v-cloak>渲染完成后，才显示</div>
 
-
-
-
-
+只渲染一次，不跟随数据源的变化而变化
+<div v-once>{{message}}</div>
+        <div><input type="text" v-model="message"></div>
+        <div>{{message}}</div>
