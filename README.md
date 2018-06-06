@@ -94,4 +94,25 @@ sortStudent:function(){
             </li>
         </ul>               
 
-======================================
+=================v-text v-html=====================
+
+<span>{{message}}</span>有弊端，如果js出错，抛出的错误很不友好
+会直接输出{{message}}
+
+<div id="app">
+        <span>{{message}}</span>
+        =
+        <span v-text="message"></span>
+    </div>
+
+如果message出现问题，或者网速慢，不会显示{{message}}
+
+data:{
+                message:'hello world!',
+                dodo:'<h2>Hello World</h2>'
+            }
+<span>{{dodo}}</span>，不会解释执行dodo的值，直接显示 “<h2>Hello World</h2>”
+
+<span v-html="dodo"></span>解析HTML标签
+注意：这样存在注入攻击的漏洞xss
+
