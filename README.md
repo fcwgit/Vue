@@ -138,6 +138,62 @@ onEnter:function(){
                 }
 注意：可以使用键盘码代替，例如：enter——>13
 
+=================v-model=====================
+双向数据绑定
+<div id="app">
+        <p>{{message}}</p>
+        <p><input type="text" v-model="message"></p>
+    </div>
+懒加载模式
+<div id="app">
+        <p>原始文本信息：{{message}}</p>
+        <h3>文本框</h3>
+        <p><input type="text" v-model.lazy="message"></p>
+    </div>
+必须为数字
+<p><input type="text" v-model.number="message"></p>
+去空格
+<p><input type="text" v-model.trim="message"></p>
+
+<h3>文本域</h3>
+<textarea cols="30" rows="10" v-model="message"></textarea>
+<h3>多选框绑定一个值</h3>
+        <input type="checkbox" id="isTrue" v-model="isTrue">
+        <label for="isTure">{{isTrue}}</label>
+
+<p>
+            <input type="checkbox" id="jspang" value="jspang" v-model="web_names">
+            <label for="isTure">jspang</label>
+            <input type="checkbox" id="panda" value="panda"  v-model="web_names">
+            <label for="isTure">panda</label>
+            <input type="checkbox" id="panpan" value="panpan"  v-model="web_names">
+            <label for="isTure">panpan</label>
+        </p>
+        <p>{{web_names}}</p>
+data:{
+                message:'hello world!',
+                isTrue:true,
+                web_names:[]
+            }
+<h3>单选框绑定</h3>
+        <p>
+            <input type="radio" id="one" value="男" v-model="sex">
+            <label for="one">男</label>
+            <input type="radio" id="two" value="女" v-model="sex">
+            <label for="two">女</label>
+            <p>你选择的性别是:{{sex}}</p>
+        </p>
+=================v-bound=====================
+
+
+
+
+
+
+
+
+
+
 
 
 
