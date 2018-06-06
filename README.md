@@ -183,14 +183,44 @@ data:{
             <label for="two">女</label>
             <p>你选择的性别是:{{sex}}</p>
         </p>
-=================v-bound=====================
+=================v-bind=====================
+绑定标签的属性
+<p><img v-bind:src="imgSrc" alt="" width="200px"></p>
 
+data:{
+                message:'hello world!',
+                imgSrc:'http://jspang.com/wp-content/uploads/2018/04/vuekoa2.jpg',
+                webUrl:'http://www.jspang.com',
+                className:'classA',
+                isOk:false
+            }
 
+绑定class中的判断
+<div :class="{classA:isOk}">2、绑定class中的判断</div>
+data:{
+                message:'hello world!',
+                imgSrc:'http://jspang.com/wp-content/uploads/2018/04/vuekoa2.jpg',
+                webUrl:'http://www.jspang.com',
+                className:'classA',
+                isOk:false
+            }
+<div :class="isOk?classA:classB">4、三元运算符</div>
 
+<div :style="{olor:red,font-size:font}">5、绑定style</div>
 
+<div :style="{color:red,fontsize:font}">5、绑定style</div>
+classA:'classA',
+classB:'classB',
+red:'red',
+font:'20px'
 
-
-
+<div :style="styleObject">6、绑定style对象</div>
+styleObject:{
+                    color:'green',
+                    fontSize:'24px'
+                }
+ 注意：在css中font-size这样写。
+ 在Vue中不支持此种写法，必须为小驼峰写法               
 
 
 
