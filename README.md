@@ -116,3 +116,29 @@ data:{
 <span v-html="dodo"></span>解析HTML标签
 注意：这样存在注入攻击的漏洞xss
 
+=================v-on=====================
+methods:{
+                jiafen:function(){
+                    this.fenshu++;
+                },
+                jianfen:function(){
+                    this.fenshu--;
+                }
+            }
+本场比赛得分：{{fenshu}}
+        <p>
+            <button v-on:click="jiafen">加</button>
+            <button v-on:click="jianfen">减</button>
+        </p>
+
+绑定事件
+<input type="text" v-on:keyup.enter="onEnter" v-model="fenshu2">
+onEnter:function(){
+                    this.fenshu += parseInt(this.fenshu2);
+                }
+注意：可以使用键盘码代替，例如：enter——>13
+
+
+
+
+
