@@ -1,0 +1,22 @@
+{
+  "name": "vue",
+  "version": "1.0.0",
+  "description": "!:自动构建html",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fcwgit/Vue.git"
+  },
+  "author": "fcwgit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fcwgit/Vue/issues"
+  },
+  "homepage": "https://github.com/fcwgit/Vue#readme"
+}
